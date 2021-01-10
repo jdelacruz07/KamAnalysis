@@ -48,6 +48,7 @@ public class AnalysisController {
 
 	@PutMapping
 	public ResponseEntity updateStrategy(@RequestBody Strategy strategy) {
+		System.out.println("put " + strategy);
 		Strategy strategy2 = analysisService.updateStrategy(strategy);
 		return new ResponseEntity(strategy2, HttpStatus.OK);
 	}
