@@ -8,7 +8,7 @@ public class Strategy {
 	private String id;
 	private String idea;
 	private String type;
-	
+
 	public Strategy() {
 		super();
 	}
@@ -48,9 +48,4 @@ public class Strategy {
 		return "Strategy [id=" + id + ", idea=" + idea + ", type=" + type + "]";
 	}
 
-	
-	
-	
 }
-	
-	
