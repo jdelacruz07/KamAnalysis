@@ -1,8 +1,8 @@
 package com.kamanalysis.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.kamanalysis.domain.Strategy;
@@ -14,9 +14,9 @@ public class StrategyService {
 	@Autowired
 	StrategyRepository strategy;
 
-	public List<Strategy> getAllStrategies() {
+	public Page<Strategy> getAllStrategies(Pageable pageable) {
 
-		List<Strategy> strategies = strategy.findAll();
+		Page<Strategy> strategies = strategy.findAll(pageable);
 		if (strategies != null) {
 			return strategies;
 		}
@@ -31,8 +31,8 @@ public class StrategyService {
 		return strategy.save(strategy2);
 	}
 
-	public void deleteStrategy(Strategy strategy2) {
-		strategy.delete(strategy2);
+	public void deleteStrategy(String id) {
+		strategy.deleteById(id);
 	}
 
 }

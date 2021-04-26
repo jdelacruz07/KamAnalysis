@@ -2,7 +2,13 @@ package com.kamanalysis.domain;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Gap {
+	
+	@Id
 	String id;
 	String gapClose;
 	Date dateSelected;

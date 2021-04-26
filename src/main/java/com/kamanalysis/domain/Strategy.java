@@ -1,8 +1,14 @@
 package com.kamanalysis.domain;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Strategy {
 
+	@Id
 	private String id;
+	private String asset;
 	private String strategy;
 	private int price;
 	private int stopLoss;
@@ -14,15 +20,24 @@ public class Strategy {
 	public Strategy() {
 	}
 
-	public Strategy(String id, String strategy, int price, int stopLoss, int takeProfit, String srcImage, String alt) {
+	public Strategy(String strategy, String asset, int price, int stopLoss, int takeProfit, String srcImage,
+			String alt) {
 		super();
-		this.id = id;
 		this.strategy = strategy;
+		this.asset = asset;
 		this.price = price;
 		this.stopLoss = stopLoss;
 		this.takeProfit = takeProfit;
 		this.srcImage = srcImage;
 		this.alt = alt;
+	}
+
+	public String getAsset() {
+		return asset;
+	}
+
+	public void setAsset(String asset) {
+		this.asset = asset;
 	}
 
 	public int getStopLoss() {
