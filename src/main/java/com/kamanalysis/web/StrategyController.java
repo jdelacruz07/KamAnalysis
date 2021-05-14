@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,8 @@ public class StrategyController {
 	StrategyService strategyService;
 
 	@PostMapping
-	public Strategy addStrategy(Strategy newStrategy) {
+	public Strategy addStrategy(@RequestBody Strategy newStrategy) {
+		System.out.println("Llegas al controller strategy");
 		return strategyService.add(newStrategy);
 
 	}
@@ -32,6 +34,11 @@ public class StrategyController {
 	@GetMapping
 	public Page<Strategy> getAllStrategies(Pageable pageable) {
 		return strategyService.getAllStrategies(pageable);
+	}
+
+	@GetMapping("/{market}")
+	public Page<Strategy> getStrategiesByMarket(@PathVariable("market") String market, Pageable pageable) {
+		return strategyService.getStrategiesByMarket(market, pageable);
 	}
 
 	@PutMapping

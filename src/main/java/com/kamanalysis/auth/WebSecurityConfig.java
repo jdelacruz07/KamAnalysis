@@ -19,9 +19,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().and().httpBasic().and().authorizeRequests().antMatchers("/").permitAll()
-				.antMatchers("/*.js", "/*.css", "/*.ico", "/*.webmanifest", "/*.map", "/assets/icons/**",
+				.antMatchers("/*.js", "/*.css", "/*.ico", "/*.jpg", "/*.webmanifest", "/*.map", "/assets/icons/**",
 						"/assets/img/**")
-				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/gap").permitAll().anyRequest().authenticated()
+				.permitAll().antMatchers(HttpMethod.GET, "/strategy/*", "/gap", "/idea").permitAll().anyRequest()
+				.authenticated()
+//				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/gap").permitAll().anyRequest().authenticated()
 				.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 	}
 

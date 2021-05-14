@@ -35,4 +35,9 @@ public class StrategyService {
 		strategy.deleteById(id);
 	}
 
+	public Page<Strategy> getStrategiesByMarket(String market, Pageable pageable) {
+		
+		return strategy.findByMarket(market, pageable);
+	}
+
 }

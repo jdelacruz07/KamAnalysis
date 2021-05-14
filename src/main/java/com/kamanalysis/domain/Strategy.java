@@ -1,5 +1,8 @@
 package com.kamanalysis.domain;
 
+import java.util.Date;
+
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,27 +12,51 @@ public class Strategy {
 	@Id
 	private String id;
 	private String asset;
+	private String market;
+	private String position;
 	private String strategy;
-	private int price;
+
+	private int buySell;
 	private int stopLoss;
 	private int takeProfit;
 
-	private String srcImage;
-	private String alt;
+	private String urlImg;
+	private String altImg;
+
+	@CreatedDate
+	private Date createdAt;
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
 
 	public Strategy() {
 	}
 
-	public Strategy(String strategy, String asset, int price, int stopLoss, int takeProfit, String srcImage,
-			String alt) {
+	public Strategy(String asset, String market, String position, String strategy, int buySell, int stopLoss,
+			int takeProfit, String urlImg, String altImg) {
 		super();
-		this.strategy = strategy;
 		this.asset = asset;
-		this.price = price;
+		this.market = market;
+		this.position = position;
+		this.strategy = strategy;
+		this.buySell = buySell;
 		this.stopLoss = stopLoss;
 		this.takeProfit = takeProfit;
-		this.srcImage = srcImage;
-		this.alt = alt;
+		this.urlImg = urlImg;
+		this.altImg = altImg;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getAsset() {
@@ -40,18 +67,6 @@ public class Strategy {
 		this.asset = asset;
 	}
 
-	public int getStopLoss() {
-		return stopLoss;
-	}
-
-	public void setStopLoss(int stopLoss) {
-		this.stopLoss = stopLoss;
-	}
-
-	public String getId() {
-		return id;
-	}
-
 	public String getStrategy() {
 		return strategy;
 	}
@@ -60,12 +75,20 @@ public class Strategy {
 		this.strategy = strategy;
 	}
 
-	public int getPrice() {
-		return price;
+	public int getBuySell() {
+		return buySell;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setBuySell(int buySell) {
+		this.buySell = buySell;
+	}
+
+	public int getStopLoss() {
+		return stopLoss;
+	}
+
+	public void setStopLoss(int stopLoss) {
+		this.stopLoss = stopLoss;
 	}
 
 	public int getTakeProfit() {
@@ -76,24 +99,43 @@ public class Strategy {
 		this.takeProfit = takeProfit;
 	}
 
-	public String getSrcImage() {
-		return srcImage;
+	public String getUrlImg() {
+		return urlImg;
 	}
 
-	public void setSrcImage(String srcImage) {
-		this.srcImage = srcImage;
+	public void setUrlImg(String urlImg) {
+		this.urlImg = urlImg;
 	}
 
-	public String getAlt() {
-		return alt;
+	public String getAltImg() {
+		return altImg;
 	}
 
-	public void setAlt(String alt) {
-		this.alt = alt;
+	public void setAltImg(String altImg) {
+		this.altImg = altImg;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public String getMarket() {
+		return market;
+	}
+
+	public void setMarket(String market) {
+		this.market = market;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	@Override
+	public String toString() {
+		return "Strategy [asset=" + asset + ", market=" + market + ", position=" + position + ", strategy=" + strategy
+				+ ", buySell=" + buySell + ", stopLoss=" + stopLoss + ", takeProfit=" + takeProfit + ", urlImg="
+				+ urlImg + ", altImg=" + altImg + ", createdAt=" + createdAt + "]";
 	}
 
 }
