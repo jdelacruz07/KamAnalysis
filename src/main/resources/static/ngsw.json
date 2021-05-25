@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621010923375,
+  "timestamp": 1621954011550,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.b107480dac34b7601d78.js",
+        "/main.368ed0ccfa2f30d8481c.js",
         "/manifest.webmanifest",
         "/polyfills.b3b05dce4f05c03b56a3.js",
         "/runtime.0e49e2b53282f40c8925.js",
@@ -37,7 +37,6 @@
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
-        "/assets/img/USDMXN.png",
         "/assets/img/bull_01.jpg",
         "/assets/img/bull_02.jpg",
         "/assets/img/bull_03.jpg",
@@ -57,15 +56,14 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/assets/img/USDMXN.png": "f1b423c1fb5df8d8d9701be553c5619eaee374a6",
     "/assets/img/bull_01.jpg": "6308b46730f9dd5ecf259051def8b8f38efeda79",
     "/assets/img/bull_02.jpg": "bb60f40c9c39ce5882c70a8e5a1fec6fb0bd89a7",
     "/assets/img/bull_03.jpg": "a9e3d95d37f4a27de6b3b5f7789f0b77ada8c2b1",
     "/assets/img/clock_01.jpg": "6691c5b9bae30331d075881d515e3377c99548eb",
     "/bull_02.0c3e746de58fdf46de07.jpg": "bb60f40c9c39ce5882c70a8e5a1fec6fb0bd89a7",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "45b170985397083cffba35da733bc572db8345dc",
-    "/main.b107480dac34b7601d78.js": "7bef5e1e4a088cf20b59b73678e6132afef60e30",
+    "/index.html": "bed8ce689271004758a7a2ed4abe616192a72996",
+    "/main.368ed0ccfa2f30d8481c.js": "aeef329ff33ff0a29750df84fa8a3e711c1c7546",
     "/manifest.webmanifest": "f3437c1beb2885630bbead8ea5aebd6d2a67d5c5",
     "/polyfills.b3b05dce4f05c03b56a3.js": "0d003992512d28c544b0a972ce2ae6b28ebbf5f6",
     "/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

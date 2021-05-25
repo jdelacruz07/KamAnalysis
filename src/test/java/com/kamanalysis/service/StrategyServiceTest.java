@@ -3,6 +3,7 @@ package com.kamanalysis.service;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,17 +19,21 @@ class StrategyServiceTest {
 	@Autowired
 	StrategyService service;
 
-//	@Disabled
+	@Disabled
 	@Test
 	void addStrategy() {
 		Strategy strategy = new Strategy();
-		strategy.setAsset("Eur");
+		strategy.setAsset("USDMXN");
 		strategy.setMarket("forex");
-		strategy.setStrategy("Estrategia: posicionarse corto, es decir venta del USD y compra del MXN.");
-		strategy.setBuySell(15);
-		strategy.setStopLoss(10);
-		strategy.setTakeProfit(20);
-		strategy.setUrlImg("../assets/img/USDMXN.png");
+		strategy.setPosition("short");
+		strategy.setStrategy("El dolar mostrando debilidad, continuara la fortaleza del peso mexicano.");
+		strategy.setBuySell(20.23);
+		strategy.setStopLoss(20.83);
+		strategy.setTakeProfit(19.54);
+//		strategy.setUrlImg("https://kam-img.s3.eu-central-1.amazonaws.com/EURGBP+Diario.png");
+//		strategy.setUrlImg("https://kam-img.s3.eu-central-1.amazonaws.com/TSLA+Diario.png");
+//		strategy.setUrlImg("https://kam-img.s3.eu-central-1.amazonaws.com/BTCUSD+Diario.png");
+		strategy.setUrlImg("https://kam-img.s3.eu-central-1.amazonaws.com/USDMXN.png");
 		strategy.setAltImg("Image USDMXN");
 
 		Pageable pageWithFourElements = PageRequest.of(0, 100);
@@ -58,6 +63,7 @@ class StrategyServiceTest {
 		assertNotNull(strategies);
 	}
 
+	@Disabled
 	@Test
 	void updateStrategy() {
 		Pageable pageWithElements = PageRequest.of(0, 100);
@@ -68,23 +74,14 @@ class StrategyServiceTest {
 		assertEquals("IBEX", updateStrategy.getUrlImg());
 	}
 
+	@Disabled
 	@Test
 	void deleteStrategy() {
 		Pageable pageWithElements = PageRequest.of(0, 100);
 		int totalStrategies = service.getAllStrategies(pageWithElements).getNumberOfElements();
 		Page<Strategy> strategies = service.getAllStrategies(pageWithElements);
-		Strategy strategy = strategies.getContent().get(0);
+		Strategy strategy = strategies.getContent().get(3);
 		service.deleteStrategy(strategy.getId());
-//		strategy = strategies.getContent().get(1);
-//		service.deleteStrategy(strategy.getId());
-//		strategy = strategies.getContent().get(2);
-//		service.deleteStrategy(strategy.getId());
-//		strategy = strategies.getContent().get(3);
-//		service.deleteStrategy(strategy.getId());
-//		strategy = strategies.getContent().get(4);
-//		service.deleteStrategy(strategy.getId());
-//		strategy = strategies.getContent().get(5);
-//		service.deleteStrategy(strategy.getId());
 		assertEquals(totalStrategies - 1, service.getAllStrategies(pageWithElements).getNumberOfElements());
 	}
 }

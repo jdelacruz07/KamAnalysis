@@ -16,29 +16,24 @@ public class Strategy {
 	private String position;
 	private String strategy;
 
-	private int buySell;
-	private int stopLoss;
-	private int takeProfit;
+	private double buySell;
+	private double stopLoss;
+	private double takeProfit;
 
 	private String urlImg;
 	private String altImg;
 
 	@CreatedDate
 	private Date createdAt;
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
+	
+	
 
 	public Strategy() {
+		super();
 	}
 
-	public Strategy(String asset, String market, String position, String strategy, int buySell, int stopLoss,
-			int takeProfit, String urlImg, String altImg) {
+	public Strategy(String asset, String market, String position, String strategy, double buySell, double stopLoss,
+			double takeProfit, String urlImg, String altImg) {
 		super();
 		this.asset = asset;
 		this.market = market;
@@ -67,6 +62,22 @@ public class Strategy {
 		this.asset = asset;
 	}
 
+	public String getMarket() {
+		return market;
+	}
+
+	public void setMarket(String market) {
+		this.market = market;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
 	public String getStrategy() {
 		return strategy;
 	}
@@ -75,27 +86,27 @@ public class Strategy {
 		this.strategy = strategy;
 	}
 
-	public int getBuySell() {
+	public double getBuySell() {
 		return buySell;
 	}
 
-	public void setBuySell(int buySell) {
+	public void setBuySell(double buySell) {
 		this.buySell = buySell;
 	}
 
-	public int getStopLoss() {
+	public double getStopLoss() {
 		return stopLoss;
 	}
 
-	public void setStopLoss(int stopLoss) {
+	public void setStopLoss(double stopLoss) {
 		this.stopLoss = stopLoss;
 	}
 
-	public int getTakeProfit() {
+	public double getTakeProfit() {
 		return takeProfit;
 	}
 
-	public void setTakeProfit(int takeProfit) {
+	public void setTakeProfit(double takeProfit) {
 		this.takeProfit = takeProfit;
 	}
 
@@ -115,27 +126,14 @@ public class Strategy {
 		this.altImg = altImg;
 	}
 
-	public String getMarket() {
-		return market;
+	public Date getCreatedAt() {
+		return createdAt;
 	}
 
-	public void setMarket(String market) {
-		this.market = market;
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
 	}
 
-	public String getPosition() {
-		return position;
-	}
-
-	public void setPosition(String position) {
-		this.position = position;
-	}
-
-	@Override
-	public String toString() {
-		return "Strategy [asset=" + asset + ", market=" + market + ", position=" + position + ", strategy=" + strategy
-				+ ", buySell=" + buySell + ", stopLoss=" + stopLoss + ", takeProfit=" + takeProfit + ", urlImg="
-				+ urlImg + ", altImg=" + altImg + ", createdAt=" + createdAt + "]";
-	}
+	
 
 }

@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.cors().and().httpBasic().and().authorizeRequests().antMatchers("/").permitAll()
 				.antMatchers("/*.js", "/*.css", "/*.ico", "/*.jpg", "/*.webmanifest", "/*.map", "/assets/icons/**",
 						"/assets/img/**")
-				.permitAll().antMatchers(HttpMethod.GET, "/strategy/*", "/gap", "/idea").permitAll().anyRequest()
+				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/strategy/*", "/gap", "/idea").permitAll().anyRequest()
 				.authenticated()
 //				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/gap").permitAll().anyRequest().authenticated()
 				.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
