@@ -23,17 +23,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 						"/assets/img/**")
 				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/strategy/*", "/gap", "/idea").permitAll().anyRequest()
 				.authenticated()
-//				.permitAll().antMatchers(HttpMethod.GET, "/strategy", "/gap").permitAll().anyRequest().authenticated()
 				.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 	}
 
+	
 	@Bean
 	@Override
 	public UserDetailsService userDetailsService() {
-		UserDetails user = User.withDefaultPasswordEncoder().username("user").password("password").roles("USER")
+		UserDetails user = User.withDefaultPasswordEncoder().username("admin").password("admin").roles("USER", "ENDPOINT_ADMIN")
 				.build();
 
 		return new InMemoryUserDetailsManager(user);
 	}
+
+	
 
 }

@@ -24,8 +24,9 @@ public class GapController {
 	@Autowired
 	GapService gapService;
 
-	@PostMapping
+	@PostMapping("/add")
 	public ResponseEntity<Gap> addGap(@RequestBody Gap gap) {
+		System.out.println("Agregar gap " + gap);
 		return gapService.addGap(gap);
 	}
 

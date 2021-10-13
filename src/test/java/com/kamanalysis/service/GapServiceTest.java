@@ -26,7 +26,7 @@ class GapServiceTest {
 		Gap gap = new Gap();
 		Date date = new Date();
 		gap.setDateSelected(date);
-		gap.setGapClose("Si");
+		gap.setIsClose("Si");
 		PageRequest p = PageRequest.of(0, 20);
 		int gapsBefore = gapService.getAllGaps(p).getSize();
 

@@ -10,16 +10,16 @@ public class Gap {
 	
 	@Id
 	String id;
-	String gapClose;
+	String isClose;
 	Date dateSelected;
 
 	public Gap() {
 		super();
 	}
 
-	public Gap(String gapClose, Date dateSelected) {
+	public Gap(String isClose, Date dateSelected) {
 		super();
-		this.gapClose = gapClose;
+		this.isClose = isClose;
 		this.dateSelected = dateSelected;
 	}
 
@@ -31,12 +31,12 @@ public class Gap {
 		this.id = id;
 	}
 
-	public String getGapClose() {
-		return gapClose;
+	public String getIsClose() {
+		return isClose;
 	}
 
-	public void setGapClose(String gapClose) {
-		this.gapClose = gapClose;
+	public void setIsClose(String gapClose) {
+		this.isClose = gapClose;
 	}
 
 	public Date getDateSelected() {
@@ -49,7 +49,7 @@ public class Gap {
 
 	@Override
 	public String toString() {
-		return "Gap [gapClose=" + gapClose + ", dateSelected=" + dateSelected + "]";
+		return "Gap [gapClose=" + isClose + ", dateSelected=" + dateSelected + "]";
 	}
 
 }
