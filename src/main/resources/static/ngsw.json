@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634123398892,
+  "timestamp": 1688545798750,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.8e1eab5229261ce48eb4.js",
+        "/main.d43e55ef91bd70392257.js",
         "/manifest.webmanifest",
         "/polyfills.b3b05dce4f05c03b56a3.js",
         "/runtime.0e49e2b53282f40c8925.js",
@@ -62,8 +62,8 @@
     "/assets/img/clock_01.jpg": "6691c5b9bae30331d075881d515e3377c99548eb",
     "/bull_02.0c3e746de58fdf46de07.jpg": "bb60f40c9c39ce5882c70a8e5a1fec6fb0bd89a7",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "ce3bb75048ad73aa3ecf53e092d871af6bb91b5e",
-    "/main.8e1eab5229261ce48eb4.js": "d22e0caf10556624f11733cae32e3922d4c395cf",
+    "/index.html": "71f75b6236fb7eb5c781770a81a2990c7a9e6729",
+    "/main.d43e55ef91bd70392257.js": "89fcd3366a682b32e99cdcdd65fd88d263673dbc",
     "/manifest.webmanifest": "f3437c1beb2885630bbead8ea5aebd6d2a67d5c5",
     "/polyfills.b3b05dce4f05c03b56a3.js": "0d003992512d28c544b0a972ce2ae6b28ebbf5f6",
     "/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
